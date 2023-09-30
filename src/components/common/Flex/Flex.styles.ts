@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { CSSProperties } from 'react';
 
@@ -10,57 +9,17 @@ export interface FlexStyledProps {
 	height?: CSSProperties['height'];
 	justifyContent?: CSSProperties['justifyContent'];
 	gap?: CSSProperties['gap'];
+	padding?: CSSProperties['padding'];
 	width?: CSSProperties['width'];
 }
 
 export const FlexStyled = styled.div<FlexStyledProps>`
 	display: flex;
-
-	${({ alignItems }) =>
-		alignItems &&
-		css`
-			align-items: ${alignItems};
-		`}
-
-	${({ direction }) =>
-		direction &&
-		css`
-			flex-direction: ${direction};
-		`}
-
-  ${({ fullHeight }) =>
-		fullHeight &&
-		css`
-			height: 100%;
-		`}
-
-  ${({ fullWidth }) =>
-		fullWidth &&
-		css`
-			width: 100%;
-		`}
-
-  ${({ gap }) =>
-		gap &&
-		css`
-			gap: ${gap};
-		`}
-
-  ${({ height }) =>
-		height &&
-		css`
-			height: ${height};
-		`}
-
-	${({ justifyContent }) =>
-		justifyContent &&
-		css`
-			justify-content: ${justifyContent};
-		`}
-    
-  ${({ width }) =>
-		width &&
-		css`
-			width: ${width};
-		`}
+	align-items: ${({ alignItems }) => alignItems || 'flex-start'};
+	flex-direction: ${({ direction }) => direction || 'row'};
+	height: ${({ fullHeight, height }) => (fullHeight ? '100%' : height || 'auto')};
+	width: ${({ fullWidth, width }) => (fullWidth ? '100%' : width || 'auto')};
+	gap: ${({ gap }) => gap || '0'};
+	padding: ${({ padding }) => padding || '0px'};
+	justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
 `;

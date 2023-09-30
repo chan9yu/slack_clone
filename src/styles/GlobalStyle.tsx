@@ -13,9 +13,19 @@ const GlobalStyle = () => {
 					font-family: 'Pretendard' !important;
 				}
 
+				html,
+				body,
+				#root {
+					height: 100%;
+				}
+
 				a {
 					text-decoration: none;
 					color: inherit;
+				}
+
+				input:focus {
+					outline: none;
 				}
 			`}
 		/>

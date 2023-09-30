@@ -20,6 +20,8 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
 	border-radius: 4px;
 	background-color: #4a154b;
 	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
 
 	&:hover {
 		background-color: rgba(74, 21, 75, 0.9);
