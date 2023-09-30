@@ -1,23 +1,30 @@
-import { RouteObject, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouteObject, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { ROUTER_PATH } from '../constants';
-import { AuthLayout, RootLayout } from '../layouts';
-import { ErrorPage } from '../pages';
-import { authRoutes } from './routes';
+import { AuthLayout } from '../layouts';
+import * as P from '../pages';
 
-/** 공통 레이아웃, 에러 페이지 설정 */
+const authRouteObject: RouteObject[] = [
+	{
+		path: ROUTER_PATH.AUTH_LOGIN,
+		element: <P.LoginPage />
+	},
+	{
+		path: ROUTER_PATH.AUTH_SIGNUP,
+		element: <P.SignupPage />
+	}
+];
+
 const routeObject: RouteObject[] = [
 	{
 		path: ROUTER_PATH.ROOT,
-		element: <RootLayout />,
-		errorElement: <ErrorPage />
-		// children: routes
+		element: <Navigate to={ROUTER_PATH.AUTH_LOGIN} />,
+		errorElement: <P.ErrorPage />
 	},
 	{
 		path: ROUTER_PATH.AUTH,
 		element: <AuthLayout />,
-		errorElement: <ErrorPage />,
-		children: authRoutes
+		children: authRouteObject
 	}
 ];
 
