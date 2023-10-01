@@ -1,22 +1,28 @@
-import { css, Global } from '@emotion/react';
+import { css, Global, useTheme } from '@emotion/react';
 
-import { pretendard, reset } from './base';
+import { reset } from './base';
 
 const GlobalStyle = () => {
+	const { colors } = useTheme();
+
 	return (
 		<Global
 			styles={css`
 				${reset}
-				${pretendard}
 
-        * {
-					font-family: 'Pretendard' !important;
+				* {
+					font-family: 'Lato', sans-serif !important;
 				}
 
 				html,
 				body,
 				#root {
 					height: 100%;
+				}
+
+				body {
+					background-color: ${colors.background.primary_background};
+					color: ${colors.text.black};
 				}
 
 				a {
