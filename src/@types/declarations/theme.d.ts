@@ -88,6 +88,7 @@ declare module '@emotion/react' {
 				gray: string;
 				white: string;
 				unselected: string;
+				error: string;
 			};
 		};
 		textStyles: {

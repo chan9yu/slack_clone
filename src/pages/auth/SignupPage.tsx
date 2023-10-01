@@ -1,17 +1,38 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { KeyboardEvent } from 'react';
 import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 import { Button, Flex, Input } from '../../components';
+import { AUTH_ERROR_TEXT } from '../../constants';
 
-interface SignupForm {
-	email: string;
-	nickname: string;
-	password: string;
-	passwordCheck: string;
-}
+const schema = yup.object().shape({
+	email: yup
+		.string()
+		.email(AUTH_ERROR_TEXT.INVALID_EMAIL_FORMAT)
+		.required(AUTH_ERROR_TEXT.EMPTY_EMAIL),
+	nickname: yup
+		.string()
+		.min(2, AUTH_ERROR_TEXT.NICKNAME_MIN_LENGTH)
+		.required(AUTH_ERROR_TEXT.EMPTY_NICKNAME),
+	password: yup
+		.string()
+		.min(6, AUTH_ERROR_TEXT.PASSWORD_MIN_LENGTH)
+		.required(AUTH_ERROR_TEXT.EMPTY_PASSWORD),
+	confirmPassword: yup
+		.string()
+		.oneOf([yup.ref('password')], AUTH_ERROR_TEXT.PASSWORD_MISMATCH)
+		.required(AUTH_ERROR_TEXT.EMPTY_CONFIRM_PASSWORD)
+});
 
 const SignupPage = () => {
-	const { register, setFocus, handleSubmit, watch, getValues } = useForm<SignupForm>();
+	const {
+		formState: { errors, submitCount },
+		handleSubmit,
+		register
+	} = useForm<yup.InferType<typeof schema>>({
+		resolver: yupResolver(schema)
+	});
 
 	const handleSignUpSubmit = handleSubmit(data => {
 		console.log('### data', data);
@@ -20,17 +41,7 @@ const SignupPage = () => {
 	const handleSignUpKeyDown = (e: KeyboardEvent<HTMLFormElement>) => {
 		if (e.key !== 'Enter') return;
 		e.preventDefault();
-		const email = getValues('email');
-		const nickname = getValues('nickname');
-		const password = getValues('password');
-		const passwordCheck = getValues('passwordCheck');
-
-		console.log('### data', {
-			email,
-			nickname,
-			password,
-			passwordCheck
-		});
+		handleSignUpSubmit();
 	};
 
 	return (
@@ -42,14 +53,39 @@ const SignupPage = () => {
 			onSubmit={handleSignUpSubmit}
 			onKeyDown={handleSignUpKeyDown}
 		>
-			<Input placeholder="이메일 주소" type="email" {...register('email')} />
-			<Input placeholder="닉네임" type="text" {...register('nickname')} />
-			<Input placeholder="비밀번호" type="password" autoComplete="off" {...register('password')} />
+			<Input
+				placeholder="이메일 주소"
+				type="email"
+				errorMsg={errors.email?.message}
+				isError={!!errors.email?.message}
+				isSussess={submitCount !== 0 && !errors.email?.message}
+				{...register('email')}
+			/>
+			<Input
+				placeholder="닉네임"
+				type="text"
+				errorMsg={errors.nickname?.message}
+				isError={!!errors.nickname?.message}
+				isSussess={submitCount !== 0 && !errors.nickname?.message}
+				{...register('nickname')}
+			/>
+			<Input
+				placeholder="비밀번호"
+				type="password"
+				autoComplete="off"
+				errorMsg={errors.password?.message}
+				isError={!!errors.password?.message}
+				isSussess={submitCount !== 0 && !errors.password?.message}
+				{...register('password')}
+			/>
 			<Input
 				placeholder="비밀번호 확인"
 				type="password"
 				autoComplete="off"
-				{...register('passwordCheck')}
+				errorMsg={errors.confirmPassword?.message}
+				isError={!!errors.confirmPassword?.message}
+				isSussess={submitCount !== 0 && !errors.confirmPassword?.message}
+				{...register('confirmPassword')}
 			/>
 			<Button fullWidth type="submit">
 				회원가입

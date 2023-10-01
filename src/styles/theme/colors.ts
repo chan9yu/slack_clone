@@ -48,6 +48,7 @@ export const colors: Theme['colors'] = {
 		black: '#1D1C1D',
 		gray: '#616061',
 		white: '#FFFFFF',
-		unselected: '#C4B8C5'
+		unselected: '#C4B8C5',
+		error: '#e01e5a'
 	}
 };
