@@ -1,4 +1,4 @@
-import { jsx } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import { forwardRef } from 'react';
 
 import type { AtomComponentPropsWithChildren } from '../../../@types';
@@ -29,9 +29,10 @@ const Text = forwardRef<HTMLTextElement, TextProps>((props, ref) => {
 		weight
 	};
 
-	const textStyle = S.makeTextStyle(textProps);
+	const theme = useTheme();
+	const textStyle = S.makeTextStyle(textProps, theme);
 
-	return jsx(tag, { ref, css: textStyle, ...rest }, null);
+	return jsx(tag, { ref, css: textStyle, ...rest });
 });
 
 Text.displayName = 'Text';

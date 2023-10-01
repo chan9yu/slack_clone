@@ -29,23 +29,35 @@
 		"deploy": "gh-pages -d dist",
 		"commit": "pnpm git-cz",
 		"prepare": "husky install",
-		"prepare:permission": "chmod +x .husky/*"
+		"prepare:permission": "chmod +x .husky/*",
+		"storybook": "storybook dev -p 6006",
+		"build:storybook": "storybook build"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
+		"@hookform/resolvers": "^3.3.1",
 		"@tanstack/react-query": "^4.33.0",
 		"axios": "^1.5.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.46.2",
 		"react-router-dom": "^6.15.0",
-		"recoil": "^0.7.7"
+		"recoil": "^0.7.7",
+		"yup": "^1.3.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.1",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@emotion/babel-plugin": "^11.11.0",
+		"@storybook/addon-essentials": "^7.4.5",
+		"@storybook/addon-interactions": "^7.4.5",
+		"@storybook/addon-links": "^7.4.5",
+		"@storybook/addon-onboarding": "^1.0.8",
+		"@storybook/blocks": "^7.4.5",
+		"@storybook/react": "^7.4.5",
+		"@storybook/react-vite": "^7.4.5",
+		"@storybook/testing-library": "^0.2.1",
 		"@tanstack/react-query-devtools": "^4.33.0",
 		"@types/node": "^20.5.7",
 		"@types/react": "^18.2.15",
@@ -59,10 +71,12 @@
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
+		"eslint-plugin-storybook": "^0.6.14",
 		"gh-pages": "^6.0.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^14.0.1",
 		"prettier": "^3.0.2",
+		"storybook": "^7.4.5",
 		"typescript": "^5.0.2",
 		"vite": "^4.4.5"
 	}

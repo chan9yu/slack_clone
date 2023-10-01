@@ -7,10 +7,10 @@ export interface TextStyleProps {
 	weight?: keyof Theme['textStyles']['weight'];
 }
 
-export const makeTextStyle = (props: TextStyleProps) => css`
-	color: ${props.color};
-	font-size: ${props.size};
-	font-weight: ${props.weight};
+export const makeTextStyle = (props: TextStyleProps, theme: Theme) => css`
+	color: ${theme.colors.text[props.color || 'black']};
+	font-size: ${theme.textStyles.size[props.size || 'body']};
+	font-weight: ${theme.textStyles.weight[props.weight || 'regular']};
 	font-style: normal;
 	line-height: normal;
 `;
