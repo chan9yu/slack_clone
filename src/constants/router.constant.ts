@@ -1,4 +1,4 @@
-export const BASE_URL = '/test';
+export const BASE_URL = '/slack_clone';
 
 export enum ROUTER_PATH {
 	ROOT = `${BASE_URL}/`,

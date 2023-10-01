@@ -1,15 +1,15 @@
 {
-	"name": "slack_clone_client",
+	"name": "slack_clone",
 	"private": true,
-	"version": "0.0.0",
-	"description": "slack clone client repository",
+	"version": "0.0.1",
+	"description": "slack clone repository",
 	"author": "chan9yu <wry5533@gmail.com>",
+	"type": "module",
+	"homepage": "https://chan9yu.github.io/slack_clone/",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chan9yu/slack_clone_client/"
+		"url": "https://github.com/chan9yu/slack_clone/"
 	},
-	"homepage": "https://chan9yu.github.io/test/",
-	"type": "module",
 	"lint-staged": {
 		"**/*.{ts,tsx}": [
 			"eslint --fix",
