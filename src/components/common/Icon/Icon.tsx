@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import { IconBaseProps } from './IconBase';
 import * as I from './icons';
 
-export interface IconComponentProps extends Omit<IconBaseProps, 'name'> {
+interface IconComponentProps extends Omit<IconBaseProps, 'name'> {
 	name: keyof typeof I;
 }
 
