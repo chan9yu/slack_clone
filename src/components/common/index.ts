@@ -2,3 +2,4 @@ export * from './Button';
 export * from './Flex';
 export * from './Input';
 export * from './Logo';
+export * from './Text';

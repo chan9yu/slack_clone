@@ -94,7 +94,7 @@ declare module '@emotion/react' {
 			size: {
 				caption2: string;
 				caption1: string;
-				Subheading: string;
+				subheading: string;
 				body: string;
 				heading4: string;
 				heading3: string;

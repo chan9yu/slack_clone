@@ -1,7 +1,5 @@
 import type { Theme } from '@emotion/react';
 
-import { getOpacityColor } from '../../styles';
-
 export const colors: Theme['colors'] = {
 	core: {
 		primary: '#3A123E',
@@ -36,7 +34,7 @@ export const colors: Theme['colors'] = {
 		medium_font_gray: '#BBBBBB',
 		light_contrast_gray: '#DDDDDD',
 		superlight_contrast_gray: '#F8F8F8',
-		overlay: getOpacityColor('#000000', 50),
+		overlay: '#0000007f',
 		unselected_nav: '#C4B8C5',
 		divider_line_nav: '#522653',
 		top_nav_bg: '#301034',

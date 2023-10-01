@@ -4,7 +4,7 @@ export const textStyles: Theme['textStyles'] = {
 	size: {
 		caption2: '12px',
 		caption1: '13px',
-		Subheading: '15px',
+		subheading: '15px',
 		body: '18px',
 		heading4: '22px',
 		heading3: '32px',

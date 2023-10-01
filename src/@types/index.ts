@@ -1,1 +1,1 @@
-export type {}
+export type * from './component.types.ts';
