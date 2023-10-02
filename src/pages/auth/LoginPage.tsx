@@ -28,6 +28,7 @@ const LoginPage = () => {
 
 	const handleSignUpSubmit = handleSubmit(data => {
 		console.log('### data', data);
+		alert('로그인 테스트');
 	});
 
 	const handleSignUpKeyDown = (e: KeyboardEvent<HTMLFormElement>) => {

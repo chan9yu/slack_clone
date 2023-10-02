@@ -36,6 +36,7 @@ const SignupPage = () => {
 
 	const handleSignUpSubmit = handleSubmit(data => {
 		console.log('### data', data);
+		alert('회원가입 테스트');
 	});
 
 	const handleSignUpKeyDown = (e: KeyboardEvent<HTMLFormElement>) => {
