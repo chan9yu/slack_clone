@@ -18,10 +18,9 @@ const config: StorybookConfig = {
 	core: {
 		builder: '@storybook/builder-vite'
 	},
-	async viteFinal(config, options) {
-		console.log(options);
-		if (config.build && config.build.rollupOptions) {
-			config.build.chunkSizeWarningLimit = 1000;
+	async viteFinal(config) {
+		if (config) {
+			config.build && (config.build.chunkSizeWarningLimit = 1000);
 		}
 
 		return config;
