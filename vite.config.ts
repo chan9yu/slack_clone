@@ -1,6 +1,11 @@
 import react, { BabelOptions } from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
+import * as pkg from './package.json';
+
+const url = pkg.homepage;
+const baseUrl = new URL(url).pathname;
+
 const babelOptions: BabelOptions = {
 	plugins: [
 		[
@@ -14,7 +19,7 @@ const babelOptions: BabelOptions = {
 };
 
 export default defineConfig({
-	base: '/slack_clone/',
+	base: baseUrl,
 	server: {
 		host: 'localhost',
 		port: 3035
