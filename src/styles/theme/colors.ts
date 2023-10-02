@@ -1,6 +1,6 @@
 import type { Theme } from '@emotion/react';
 
-const coreColors: Theme['colors']['core'] = {
+const core: Theme['colors']['core'] = {
 	primary: '#3A123E',
 	primary_brand: '#4A154B',
 	black: '#000000',
@@ -11,7 +11,7 @@ const coreColors: Theme['colors']['core'] = {
 	red: '#E01E5A'
 };
 
-const secondaryColors: Theme['colors']['secondary'] = {
+const secondary: Theme['colors']['secondary'] = {
 	cobalt: '#1E328F',
 	skyblue: '#2F8AB7',
 	teal: '#0096A2',
@@ -29,7 +29,7 @@ const secondaryColors: Theme['colors']['secondary'] = {
 	mauve: '#C05B8C'
 };
 
-const grayColors: Theme['colors']['gray'] = {
+const gray: Theme['colors']['gray'] = {
 	darker: '#1D1C1D',
 	dark: '#616061',
 	medium: '#868686',
@@ -38,37 +38,37 @@ const grayColors: Theme['colors']['gray'] = {
 	lightest: '#F8F8F8'
 };
 
-const hoverColors: Theme['colors']['hover'] = {
+const hover: Theme['colors']['hover'] = {
 	dark: '#1364A3',
 	default: '#0C4C8C'
 };
 
-const highlightColors: Theme['colors']['highlight'] = {
+const highlight: Theme['colors']['highlight'] = {
 	accent: '#1C9BD1',
 	secondary: '#F3C845'
 };
 
-const overlayColors: Theme['colors']['overlay'] = {
+const overlay: Theme['colors']['overlay'] = {
 	black: '#0000007f'
 };
 
-const navColors: Theme['colors']['nav'] = {
+const nav: Theme['colors']['nav'] = {
 	divider_line: '#C4B8C5',
 	unselected_text: '#522653'
 };
 
-const backgroundColors: Theme['colors']['background'] = {
+const background: Theme['colors']['background'] = {
 	top_nav: '#301034',
 	top_search: '#4F3452'
 };
 
 export const colors: Theme['colors'] = {
-	core: coreColors,
-	secondary: secondaryColors,
-	gray: grayColors,
-	hover: hoverColors,
-	highlight: highlightColors,
-	overlay: overlayColors,
-	nav: navColors,
-	background: backgroundColors
+	core,
+	secondary,
+	gray,
+	hover,
+	highlight,
+	overlay,
+	nav,
+	background
 };
