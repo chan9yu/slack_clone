@@ -58,7 +58,7 @@ declare module '@emotion/react' {
 				/** #4F3452 */ top_search: `#${string}`;
 			};
 		};
-		textStyles: {
+		typography: {
 			size: {
 				/** 12px */ caption2: string;
 				/** 13px */ caption1: string;

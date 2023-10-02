@@ -1,9 +1,9 @@
 import type { Theme } from '@emotion/react';
 
 import { colors } from './colors';
-import { textStyles } from './textStyles';
+import { typography } from './typography';
 
 export const theme: Theme = {
 	colors,
-	textStyles
+	typography
 };

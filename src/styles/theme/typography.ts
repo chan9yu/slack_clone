@@ -1,6 +1,6 @@
 import type { Theme } from '@emotion/react';
 
-export const textStyles: Theme['textStyles'] = {
+export const typography: Theme['typography'] = {
 	size: {
 		caption2: '12px',
 		caption1: '13px',
