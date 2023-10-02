@@ -1,0 +1,103 @@
+import { Meta } from '@storybook/blocks';
+import { ColorPalette, ColorItem } from '@storybook/blocks';
+
+import { colors } from '../styles/theme/colors';
+
+<Meta title="Foundation/Colors" />
+
+## Colors
+
+- <a href="https://brand.slackhq.com/color#Core-palette">slack color system</a> 기준으로 color palette를
+  정의합니다.
+- theme 객체안에 colors 값으로 접근하여 사용합니다.
+
+<br />
+
+<ColorPalette>
+	<ColorItem
+		title="Core Colors"
+		subtitle="theme.colors.core[$color]"
+		colors={{
+			primary: colors.core.primary,
+			primary_brand: colors.core.primary_brand,
+			black: colors.core.black,
+			white: colors.core.white,
+			blue: colors.core.blue,
+			green: colors.core.green,
+			yellow: colors.core.yellow,
+			red: colors.core.red
+		}}
+	/>
+	<ColorItem
+		title="Secondary Colors"
+		subtitle="theme.colors.secondary[$color]"
+		colors={{
+			cobalt: colors.secondary.cobalt,
+			skyblue: colors.secondary.skyblue,
+			teal: colors.secondary.teal,
+			pool: colors.secondary.pool,
+			evergreen: colors.secondary.evergreen,
+			moss: colors.secondary.moss,
+			yolk: colors.secondary.yolk,
+			sandbar: colors.secondary.sandbar,
+			peach: colors.secondary.peach,
+			salmon: colors.secondary.salmon,
+			bubblegum: colors.secondary.bubblegum,
+			crimson: colors.secondary.crimson,
+			terracotta: colors.secondary.terracotta,
+			berry: colors.secondary.berry,
+			mauve: colors.secondary.mauve
+		}}
+	/>
+	<ColorItem
+		title="Gray Colors"
+		subtitle="theme.colors.gray[$color]"
+		colors={{
+			darker: colors.gray.darker,
+			dark: colors.gray.dark,
+			medium: colors.gray.medium,
+			light: colors.gray.light,
+			lighter: colors.gray.lighter,
+			lightest: colors.gray.lightest
+		}}
+	/>
+	<ColorItem
+		title="Hover Colors"
+		subtitle="theme.colors.hover[$color]"
+		colors={{
+			dark: colors.hover.dark,
+			default: colors.hover.default
+		}}
+	/>
+	<ColorItem
+		title="Highlight Colors"
+		subtitle="theme.colors.highlight[$color]"
+		colors={{
+			accent: colors.highlight.accent,
+			secondary: colors.highlight.secondary
+		}}
+	/>
+	<ColorItem
+		title="Overlay Colors"
+		subtitle="theme.colors.overlay[$color]"
+		colors={{
+			black: colors.overlay.black
+		}}
+	/>
+	<ColorItem
+		title="Nav Colors"
+		subtitle="theme.colors.nav[$color]"
+		colors={{
+			divider_line: colors.nav.divider_line,
+			unselected_text: colors.nav.unselected_text
+		}}
+	/>
+	<ColorItem
+		title="Background Colors"
+		subtitle="theme.colors.background[$color]"
+		colors={{
+			top_nav: colors.background.top_nav,
+			top_search: colors.background.top_search
+		}}
+	/>
+</ColorPalette>

@@ -4,109 +4,76 @@ declare module '@emotion/react' {
 	export interface Theme {
 		colors: {
 			core: {
-				/** sidebar color */
-				primary: string;
-				/** primary color */
-				primary_brand: string;
-				/** background color */
-				bg: string;
-				/** primary black */
-				black: string;
-				/** default white bg */
-				white: string;
+				/** #3A123E */ primary: `#${string}`;
+				/** #4A154B */ primary_brand: `#${string}`;
+				/** #000000 */ black: `#${string}`;
+				/** #FFFFFF */ white: `#${string}`;
+				/** #36C5F0 */ blue: `#${string}`;
+				/** #2EB67D */ green: `#${string}`;
+				/** #ECB22E */ yellow: `#${string}`;
+				/** #E01E5A */ red: `#${string}`;
 			};
 			secondary: {
-				/** cobalt branding & illustration */
-				cobalt: string;
-				/** sky blue branding & illustration */
-				skyblue: string;
-				/** teal for illustration */
-				teal: string;
-				/** pool for illustration */
-				pool: string;
-				/** evergreen, branding */
-				evergreen: string;
-				/** moss, branding */
-				moss: string;
-				/** yolk, branding */
-				yolk: string;
-				/** sandbar, branding */
-				sandbar: string;
-				/** peach, branding */
-				peach: string;
-				/** salmon, branding */
-				salmon: string;
-				/** bubblegum, branding */
-				bubblegum: string;
-				/** crimson, branding */
-				crimson: string;
-				/** terracotta, branding */
-				terracotta: string;
-				/** berry, branding */
-				berry: string;
-				/** mauve, branding */
-				mauve: string;
+				/** #1E328F */ cobalt: `#${string}`;
+				/** #2F8AB7 */ skyblue: `#${string}`;
+				/** #0096A2 */ teal: `#${string}`;
+				/** #78D7DD */ pool: `#${string}`;
+				/** #185F34 */ evergreen: `#${string}`;
+				/** #779846 */ moss: `#${string}`;
+				/** #FFA100 */ yolk: `#${string}`;
+				/** #FFD57E */ sandbar: `#${string}`;
+				/** #FED4BE */ peach: `#${string}`;
+				/** #F2606A */ salmon: `#${string}`;
+				/** #F6BBC1 */ bubblegum: `#${string}`;
+				/** #921D21 */ crimson: `#${string}`;
+				/** #DE8969 */ terracotta: `#${string}`;
+				/** #7C2852 */ berry: `#${string}`;
+				/** #C05B8C */ mauve: `#${string}`;
+			};
+			gray: {
+				/** #1D1C1D */ darker: `#${string}`;
+				/** #616061 */ dark: `#${string}`;
+				/** #868686 */ medium: `#${string}`;
+				/** #BBBBBB */ light: `#${string}`;
+				/** #DDDDDD */ lighter: `#${string}`;
+				/** #F8F8F8 */ lightest: `#${string}`;
+			};
+			hover: {
+				/** #1364A3 */ default: `#${string}`;
+				/** #0C4C8C */ dark: `#${string}`;
+			};
+			highlight: {
+				/** #1C9BD1 */ accent: `#${string}`;
+				/** #F3C845 */ secondary: `#${string}`;
+			};
+			overlay: {
+				/** #0000007f */ black: `#${string}`;
+			};
+			nav: {
+				/** #C4B8C5 */ unselected_text: `#${string}`;
+				/** #522653 */ divider_line: `#${string}`;
 			};
 			background: {
-				/** default background color */
-				primary_background: string;
-				/** default foreground color */
-				invented_foreground: string;
-				/** invented background color */
-				invented_background: string;
-				/** dark max gray */
-				max_contrast_gray: string;
-				/** medium high gray */
-				high_contrast_gray: string;
-				/** medium font gray */
-				medium_font_gray: string;
-				/** low gray (borders) */
-				light_contrast_gray: string;
-				/** light gray */
-				superlight_contrast_gray: string;
-				/** overlay */
-				overlay: string;
-				/** unselected nav text */
-				unselected_nav: string;
-				/** divider line */
-				divider_line_nav: string;
-				/** top navigation */
-				top_nav_bg: string;
-				/** search background */
-				top_search_bg: string;
-				/** highlight hover color */
-				hover: string;
-				/** dark highlight color */
-				dark_hover: string;
-				/** blue accent color, Highlight */
-				highlight_accent: string;
-				/** yellow accent color, Highlight */
-				secondary_highlight: string;
-			};
-			text: {
-				black: string;
-				gray: string;
-				white: string;
-				unselected: string;
-				error: string;
+				/** #301034 */ top_nav: `#${string}`;
+				/** #4F3452 */ top_search: `#${string}`;
 			};
 		};
 		textStyles: {
 			size: {
-				caption2: string;
-				caption1: string;
-				subheading: string;
-				body: string;
-				heading4: string;
-				heading3: string;
-				heading2: string;
-				heading1: string;
+				/** 12px */ caption2: string;
+				/** 13px */ caption1: string;
+				/** 15px */ subheading: string;
+				/** 18px */ body: string;
+				/** 22px */ heading4: string;
+				/** 32px */ heading3: string;
+				/** 40px */ heading2: string;
+				/** 48px */ heading1: string;
 			};
 			weight: {
-				regular: string;
-				semibold: string;
-				bold: string;
-				black: string;
+				/** 400 */ regular: string;
+				/** 400 */ semibold: string;
+				/** 700 */ bold: string;
+				/** 900 */ black: string;
 			};
 		};
 	}

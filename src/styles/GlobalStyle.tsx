@@ -21,8 +21,8 @@ const GlobalStyle = () => {
 				}
 
 				body {
-					background-color: ${colors.background.primary_background};
-					color: ${colors.text.black};
+					background-color: ${colors.core.white};
+					color: ${colors.gray.darker};
 				}
 
 				a {
