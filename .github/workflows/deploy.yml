@@ -26,6 +26,10 @@ jobs:
           cache: 'pnpm'
       - name: Install Dependencies And Build 🔧
         run: pnpm install --frozen-lockfile && pnpm build
+      - name: Build storybook
+        run: |
+          pnpm build:storybook
+          mv ./storybook-static ./dist/storybook
       - name: Deploy with gh-pages 📦
         run: |
           git config --global user.email "wry5533@gmail.com"

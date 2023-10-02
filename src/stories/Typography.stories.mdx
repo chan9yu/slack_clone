@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/blocks';
+import { Typeset } from '@storybook/blocks';
+
+import { typography } from '../styles/theme/typography';
+
+<Meta title="Foundation/Typography" />
+
+# Typography
+
+- typography 정의 내용입니다.
+
+<br />
+
+### Lato - Regular
+
+<Typeset
+	fontSizes={['caption2', 'caption1', 'subheading', 'body', 'heading4'].map(
+		key => typography.size[key]
+	)}
+	fontWeight={typography.weight.regular}
+	sampleText="Regular"
+	fontFamily="'Lato', sans-serif"
+/>
+
+### Lato - Semibold
+
+<Typeset
+	fontSizes={['caption2', 'caption1', 'subheading', 'body', 'heading4'].map(
+		key => typography.size[key]
+	)}
+	fontWeight={typography.weight.semibold}
+	sampleText="Semibold"
+	fontFamily="'Lato', sans-serif"
+/>
+
+### Lato - Bold
+
+<Typeset
+	fontSizes={['caption2', 'caption1', 'subheading', 'body', 'heading4', 'heading3'].map(
+		key => typography.size[key]
+	)}
+	fontWeight={typography.weight.bold}
+	sampleText="Bold"
+	fontFamily="'Lato', sans-serif"
+/>
+
+### Lato - Black
+
+<Typeset
+	fontSizes={Object.values(typography.size)}
+	fontWeight={typography.weight.black}
+	sampleText="Black"
+	fontFamily="'Lato', sans-serif"
+/>

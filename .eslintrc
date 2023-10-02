@@ -1,24 +1,22 @@
 {
-  "root": true,
-  "env": { 
-    "browser": true, 
-    "es2020": true
-  },
-  "extends": [
-    "prettier",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended",
-  ],
-  "ignorePatterns": ["dist", ".eslintrc"],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["react-refresh"],
-  "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ],
-    "@typescript-eslint/no-unused-vars": "off"
-  }
+	"root": true,
+	"env": {
+		"browser": true,
+		"es2020": true
+	},
+	"extends": [
+		"prettier",
+		"eslint:recommended",
+		"plugin:prettier/recommended",
+		"plugin:storybook/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"ignorePatterns": ["dist", ".eslintrc"],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["react-refresh"],
+	"rules": {
+		"react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+		"@typescript-eslint/no-unused-vars": "off"
+	}
 }
