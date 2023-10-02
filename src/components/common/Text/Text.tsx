@@ -13,8 +13,10 @@ interface TextProps extends ExtendedType {
 }
 
 const Text = forwardRef<HTMLTextElement, TextProps>((props, ref) => {
+	const theme = useTheme();
+
 	const {
-		color = 'black',
+		color = theme.colors.gray.darker,
 		noWrap = false,
 		size = 'body',
 		tag = 'span',
@@ -29,10 +31,11 @@ const Text = forwardRef<HTMLTextElement, TextProps>((props, ref) => {
 		weight
 	};
 
-	const theme = useTheme();
-	const textStyle = S.makeTextStyle(textProps, theme);
-
-	return jsx(tag, { ref, css: textStyle, ...rest });
+	return jsx(tag, {
+		ref,
+		css: S.makeTextStyle(textProps, theme),
+		...rest
+	});
 });
 
 Text.displayName = 'Text';

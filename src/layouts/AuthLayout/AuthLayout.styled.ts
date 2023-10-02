@@ -16,14 +16,6 @@ export const Title = styled.h2`
 	font-weight: 700;
 `;
 
-export const SubTitle = styled.h5`
-	color: #454245;
-	text-align: center;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
-`;
-
 export const SubTitleStrong = styled.strong`
 	font-weight: bold;
 `;

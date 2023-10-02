@@ -1,16 +1,16 @@
 import { Theme, css } from '@emotion/react';
 
 export interface TextStyleProps {
-	color?: keyof Theme['colors']['text'];
+	color?: string;
 	noWrap?: boolean;
-	size?: keyof Theme['textStyles']['size'];
-	weight?: keyof Theme['textStyles']['weight'];
+	size?: keyof Theme['typography']['size'];
+	weight?: keyof Theme['typography']['weight'];
 }
 
 export const makeTextStyle = (props: TextStyleProps, theme: Theme) => css`
-	color: ${theme.colors.text[props.color || 'black']};
-	font-size: ${theme.textStyles.size[props.size || 'body']};
-	font-weight: ${theme.textStyles.weight[props.weight || 'regular']};
+	color: ${props.color ? props.color : theme.colors.gray.darker};
+	font-size: ${theme.typography.size[props.size || 'body']};
+	font-weight: ${theme.typography.weight[props.weight || 'regular']};
 	font-style: normal;
 	line-height: normal;
 `;
