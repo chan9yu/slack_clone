@@ -1,4 +1,4 @@
-import { Navigate, RouteObject, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouteObject, RouterProvider, createHashRouter } from 'react-router-dom';
 
 import { ROUTER_PATH } from '../constants';
 import { AuthLayout } from '../layouts';
@@ -28,6 +28,6 @@ const routeObject: RouteObject[] = [
 	}
 ];
 
-const Router = () => <RouterProvider router={createBrowserRouter(routeObject)} />;
+const Router = () => <RouterProvider router={createHashRouter(routeObject)} />;
 
 export default Router;
