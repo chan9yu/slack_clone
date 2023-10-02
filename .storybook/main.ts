@@ -14,6 +14,17 @@ const config: StorybookConfig = {
 	},
 	docs: {
 		autodocs: 'tag'
+	},
+	core: {
+		builder: '@storybook/builder-vite'
+	},
+	async viteFinal(config, options) {
+		console.log(options);
+		if (config.build && config.build.rollupOptions) {
+			config.build.chunkSizeWarningLimit = 1000;
+		}
+
+		return config;
 	}
 };
 export default config;

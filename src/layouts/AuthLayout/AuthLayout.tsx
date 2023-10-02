@@ -7,6 +7,7 @@ import * as S from './AuthLayout.styled';
 
 const authData = {
 	[ROUTER_PATH.AUTH_LOGIN]: {
+		headTitle: '로그인 | Slack',
 		title: '이메일로 로그인해 보세요',
 		subTitle: { bold: '직장에서 사용하는 이메일 주소', regular: '로 로그인하는 걸 추천드려요.' },
 		linkLabel: 'Slack을 처음 사용하시나요?',
@@ -14,6 +15,7 @@ const authData = {
 		linkTo: ROUTER_PATH.AUTH_SIGNUP
 	},
 	[ROUTER_PATH.AUTH_SIGNUP]: {
+		headTitle: '회원가입 | Slack',
 		title: '먼저 이메일부터 입력해 보세요',
 		subTitle: { bold: '직장에서 사용하는 이메일 주소', regular: '로 로그인하는 걸 추천드려요.' },
 		linkLabel: '이미 Slack을 사용하고 있나요?',
@@ -28,6 +30,7 @@ const AuthLayout = () => {
 	const { pathname } = useLocation();
 
 	const {
+		headTitle,
 		title,
 		subTitle: { bold: subTitleBold, regular: subTitleRegular },
 		linkLabel,
@@ -38,7 +41,7 @@ const AuthLayout = () => {
 	return (
 		<>
 			<Helmet>
-				<title>로그인 | Slack</title>
+				<title>{headTitle}</title>
 			</Helmet>
 			<Flex alignItems="center" direction="column" fullHeight>
 				<S.Header>
