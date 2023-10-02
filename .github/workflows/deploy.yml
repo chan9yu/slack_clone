@@ -30,6 +30,7 @@ jobs:
         run: |
           pnpm build:storybook
           mv ./storybook-static ./dist/storybook
+          touch ./dist/storybook/.nojekyll
       - name: Deploy with gh-pages 📦
         run: |
           git config --global user.email "wry5533@gmail.com"
