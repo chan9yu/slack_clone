@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
-# Slack 클론코딩
+# 🧑🏻‍💻 Slack 클론코딩
 
-> 리액트를 이용한 Slack 클론코딩
+> slack clone project with react.
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fchan9yu%2Fslack_clone&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -12,26 +12,27 @@
 
 <br />
 
-## Link
+## 🔗 Link
 
-- 배포된 앱은 [여기](https://chan9yu.github.io/slack_clone/)에서 확인해 볼 수 있습니다.
-- 배포된 스토리북 문서는 [여기](https://chan9yu.github.io/slack_clone/storybook)에서 확인해 볼 수 있습니다.
-
-<p align="right">
-  <a href="#readme-top">맨 위로</a>
-</p>
-
-## Features
-
-- ...
-- ...
-- ...
+- [APP](https://chan9yu.github.io/slack_clone/)
+- [Storybook](https://chan9yu.github.io/slack_clone/storybook)
+- [Back End Repository](https://chan9yu.github.io/slack_clone_api_server/)
 
 <p align="right">
   <a href="#readme-top">맨 위로</a>
 </p>
 
-## Tech Stack
+## 📖 Features
+
+- ...
+- ...
+- ...
+
+<p align="right">
+  <a href="#readme-top">맨 위로</a>
+</p>
+
+## 🔧 Tech Stack
 
 - <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
 - <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
@@ -51,7 +52,7 @@
   <a href="#readme-top">맨 위로</a>
 </p>
 
-## Getting Started
+## 🚀 Getting Started
 
 로컬환경에서 앱을 실행하는 방법입니다.
 
