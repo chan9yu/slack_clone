@@ -14,9 +14,9 @@
 
 ## 🔗 Link
 
-- [APP](https://chan9yu.github.io/slack_clone/)
-- [Storybook](https://chan9yu.github.io/slack_clone/storybook)
-- [Back End Repository](https://chan9yu.github.io/slack_clone_api_server/)
+- <a href="https://chan9yu.github.io/slack_clone" target="_blank" rel="noreferrer">APP</a>
+- <a href="https://chan9yu.github.io/slack_clone/storybook" target="_blank" rel="noreferrer">Storybook</a>
+- <a href="https://github.com/chan9yu/slack_clone_api_server/" target="_blank" rel="noreferrer">Back End Repository</a>
 
 <p align="right">
   <a href="#readme-top">맨 위로</a>
